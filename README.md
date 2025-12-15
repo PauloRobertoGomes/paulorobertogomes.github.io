@@ -1,73 +1,41 @@
-# Welcome to your Lovable project
+# Portfólio Pessoal
 
-## Project info
+Este repositório contém o código-fonte do meu portfólio pessoal (site estático feito com Vite, React e TypeScript).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Visão geral
 
-## How can I edit this code?
+- **Tecnologias:** Vite, TypeScript, React, Tailwind CSS, shadcn-ui
+- **Objetivo:** Apresentar projetos, experiências e informações de contato.
 
-There are several ways of editing your application.
+## Como rodar localmente
 
-**Use Lovable**
+1. Clone o repositório e entre na pasta do projeto:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+```bash
+git clone https://github.com/PauloRobertoGomes/paulorobertogomes.github.io.git
+cd paulorobertogomes.github.io
+```
 
-Changes made via Lovable will be committed automatically to this repo.
+2. Instale dependências e rode em modo de desenvolvimento:
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O servidor de desenvolvimento do Vite será aberto em `http://localhost:5173` (ou outra porta disponível).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deploy
 
-**Use GitHub Codespaces**
+Para publicar a versão de produção use o script de deploy fornecido no `package.json`:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run deploy
+```
 
-## What technologies are used for this project?
+- `npm run deploy` executa o processo de build e de publicação no GitHub Pages.
 
-This project is built with:
+Observações:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Certifique-se de ter Node.js e npm instalados.
+- Se o `npm run deploy` exigir um token ou configuração extra (por exemplo `GH_TOKEN` para GitHub Pages), configure as variáveis de ambiente antes do deploy.
