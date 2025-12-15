@@ -4,12 +4,12 @@ const Footer = () => {
       <p className="text-muted-foreground text-sm font-mono">
         Desenvolvido por{" "}
         <a
-          href="https://github.com/seuusuario"
+          href="https://github.com/PauloRobertoGomes"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          Seu Nome
+          Paulo Roberto
         </a>
       </p>
     </footer>

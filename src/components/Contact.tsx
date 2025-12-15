@@ -5,22 +5,17 @@ const Contact = () => {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/seuusuario",
+      url: "https://github.com/PauloRobertoGomes",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/seuusuario",
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      url: "https://twitter.com/seuusuario",
+      url: "https://linkedin.com/in/paulo-roberto-gomes-abreu",
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:seu@email.com",
+      url: "mailto:paulo.roberto.gomes.2001@gmail.com",
     },
   ];
 
@@ -32,13 +27,13 @@ const Contact = () => {
           Vamos Conversar
         </h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-10">
-          Estou sempre aberto a novas oportunidades e parcerias. 
-          Se você tem um projeto interessante ou apenas quer trocar uma ideia, 
-          não hesite em entrar em contato!
+          Estou sempre aberto a novas oportunidades e parcerias. Se você tem um
+          projeto interessante ou apenas quer trocar uma ideia, não hesite em
+          entrar em contato!
         </p>
 
         <a
-          href="mailto:seu@email.com"
+          href="mailto:paulo.roberto.gomes.2001@gmail.com"
           className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 hover:scale-105 font-semibold text-lg mb-16"
         >
           <Mail className="w-5 h-5" />

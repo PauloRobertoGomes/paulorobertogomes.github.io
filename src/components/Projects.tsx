@@ -1,51 +1,67 @@
 import { ExternalLink, Github, Folder } from "lucide-react";
 
+type FeaturedProject = {
+  title: string;
+  description: string;
+  tech: string[];
+  github?: string;
+  live?: string;
+  image?: string;
+};
+
 const Projects = () => {
-  const featuredProjects = [
+  const featuredProjects: FeaturedProject[] = [
     {
-      title: "E-commerce Platform",
+      title: "Projeto Libélula",
       description:
-        "Plataforma completa de e-commerce com carrinho de compras, pagamentos via Stripe e dashboard administrativo. Desenvolvido com foco em performance e experiência do usuário.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "https://github.com",
-      live: "https://example.com",
+        "Aplicação Web e Mobile para assistência e conscientização sobre Cancer de Colo do Útero.",
+      tech: ["Flutter", "Flutter Modular", "Mobx", "Firebase"],
+      live: "https://projeto-libelula.infinityfreeapp.com/",
+      image: new URL("../assets/projects/projeto-libelula.png", import.meta.url)
+        .href,
     },
     {
-      title: "Task Management App",
+      title: "Períodos Sensíveis",
       description:
-        "Aplicativo de gerenciamento de tarefas com funcionalidades de drag-and-drop, colaboração em tempo real e integração com calendário.",
-      tech: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
-      github: "https://github.com",
-      live: "https://example.com",
+        "Aplicação Web informativa para auxiliar mães com os cuidados e evoluções dos bebês nos primeiros anos de vida.",
+      tech: ["Flutter", "Flutter Modular", "MobX"],
+      live: "https://periodossensiveis.infinityfreeapp.com/",
+      image: new URL(
+        "../assets/projects/periodos-sensiveis.png",
+        import.meta.url
+      ).href,
     },
     {
-      title: "API de Análise de Dados",
+      title: "ESA Tool",
       description:
-        "API RESTful para análise de dados financeiros com geração de relatórios automatizados e visualizações interativas.",
-      tech: ["Python", "FastAPI", "Pandas", "Docker"],
-      github: "https://github.com",
+        "Aplicação Web escrita em R para analise e predição de dados usando técnicas de series temporais.",
+      tech: ["R", "Shiny", "Docker"],
       live: "https://example.com",
+      image: new URL("../assets/projects/esa-tool.png", import.meta.url).href,
     },
   ];
 
-  const otherProjects = [
+  const otherProjects: FeaturedProject[] = [
     {
-      title: "CLI Tool",
-      description: "Ferramenta de linha de comando para automação de tarefas de desenvolvimento.",
-      tech: ["Node.js", "Commander"],
-      github: "https://github.com",
+      title: "Identoolfier Flutter",
+      description:
+        "Aplicativo móvel para identificação de objetos através de fotos.",
+      tech: ["Flutter"],
+      // github: "https://github.com",
     },
     {
-      title: "Chrome Extension",
-      description: "Extensão para melhorar produtividade durante navegação.",
-      tech: ["JavaScript", "Chrome API"],
-      github: "https://github.com",
+      title: "OpenCV App",
+      description:
+        "Aplicação flutter para testes de processamento de imagens usando a OpenCV.",
+      tech: ["Flutter", "OpenCV"],
+      // github: "https://github.com/PauloRobertoGomes/firebase_todo_app",
     },
     {
-      title: "Portfolio Template",
-      description: "Template responsivo para criação de portfolios profissionais.",
-      tech: ["React", "Tailwind"],
-      github: "https://github.com",
+      title: "Nitro Quiz",
+      description:
+        "Jogo simples de perguntas e respostas desenvolvido com Flutter",
+      tech: ["Fluter", "MobX"],
+      // github: "https://github.com/PauloRobertoGomes/projeto-final-sd/tree/main",
     },
   ];
 
@@ -77,7 +93,11 @@ const Projects = () => {
                 <div className="relative aspect-video bg-secondary rounded-xl overflow-hidden group">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Folder className="w-20 h-20 text-primary/50" />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 </div>
               </div>
@@ -93,7 +113,11 @@ const Projects = () => {
                   Projeto em Destaque
                 </p>
                 <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">
-                  <a href={project.live} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {project.title}
                   </a>
                 </h3>
@@ -114,14 +138,16 @@ const Projects = () => {
                     index % 2 === 1 ? "md:justify-start" : "md:justify-end"
                   }`}
                 >
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground hover:text-primary transition-colors"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
                   <a
                     href={project.live}
                     target="_blank"
@@ -137,23 +163,21 @@ const Projects = () => {
         </div>
 
         {/* Other Projects */}
-        <h3 className="text-2xl font-bold text-center mb-8">
-          Outros Projetos
-        </h3>
+        <h3 className="text-2xl font-bold text-center mb-8">Outros Projetos</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {otherProjects.map((project) => (
             <a
               key={project.title}
-              href={project.github}
+              href={project.github || project.live || "#"}
               target="_blank"
               rel="noopener noreferrer"
               className="p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 card-glow group"
             >
               <div className="flex items-center justify-between mb-6">
                 <Folder className="w-10 h-10 text-primary" />
-                <div className="flex gap-3">
+                {/* <div className="flex gap-3">
                   <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                </div>
+                </div> */}
               </div>
               <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
                 {project.title}

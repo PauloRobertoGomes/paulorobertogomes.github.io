@@ -3,16 +3,12 @@ import { GraduationCap, Award, Calendar } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Bacharelado em Ciência da Computação",
-      institution: "Universidade Federal",
-      period: "2015 - 2019",
-      description: "Foco em engenharia de software e sistemas distribuídos.",
-    },
-    {
-      degree: "MBA em Gestão de Projetos de TI",
-      institution: "Instituição de Ensino",
-      period: "2020 - 2021",
-      description: "Metodologias ágeis e gestão de equipes de desenvolvimento.",
+      degree: "Bacharelado em Engenharia da Computação",
+      institution:
+        "UNILAB - Universidade da Integração Internacional da Lusofonia Afro-Brasileira",
+      period: "2018 - 2026",
+      description:
+        "Foco em desenvolvimento de software, redes de computadores e sistemas embarcados.",
     },
   ];
 
@@ -50,7 +46,7 @@ const Education = () => {
           <div className="flex-1 h-px bg-border max-w-xs" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Education */}
           <div>
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
@@ -77,8 +73,7 @@ const Education = () => {
               ))}
             </div>
           </div>
-
-          {/* Certifications */}
+          {/* Certifications
           <div>
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <Award className="w-5 h-5 text-primary" />
@@ -106,7 +101,7 @@ const Education = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

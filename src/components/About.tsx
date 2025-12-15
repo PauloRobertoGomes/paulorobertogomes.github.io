@@ -1,21 +1,26 @@
-import { Code2, Briefcase, GraduationCap } from "lucide-react";
+import { Code2, Briefcase, GraduationCap, Microscope } from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
       icon: Code2,
       title: "Desenvolvimento",
-      description: "React, TypeScript, Node.js, Python",
+      description: "Flutter, React Native, ReactJS, Node.js",
     },
     {
       icon: Briefcase,
       title: "Experiência",
-      description: "+5 anos de experiência profissional",
+      description: "+2 anos de experiência profissional",
+    },
+    {
+      icon: Microscope,
+      title: "Pesquisa",
+      description: "+5 anos atuando em grupos de pesquisa acadêmica",
     },
     {
       icon: GraduationCap,
       title: "Formação",
-      description: "Ciência da Computação",
+      description: "Engenharia da Computação",
     },
   ];
 
@@ -33,42 +38,49 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Sou um desenvolvedor apaixonado por tecnologia e inovação. 
-              Ao longo da minha carreira, tive a oportunidade de trabalhar em 
-              diversos projetos desafiadores que me permitiram crescer como profissional.
+              Sou um Desenvolvedor Full-Stack focado em Mobile, apaixonado por
+              inovação e por criar soluções digitais que geram impacto real.
+              Minha formação em Engenharia da Computação é complementada por uma
+              sólida base autodidata. Busco constantemente usar a tecnologia,
+              especialmente em saúde e pesquisa, como uma ferramenta poderosa
+              para a transformação.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Meu foco está em criar soluções elegantes e eficientes, sempre 
-              buscando as melhores práticas de desenvolvimento. Acredito que 
-              um bom código deve ser limpo, testável e fácil de manter.
+              Atualmente, atuo na Co.Urban desenvolvendo apps robustos com
+              Flutter e React Native. Tenho forte domínio em Python, NodeJS e
+              Docker. Nos grupos LISIA e PROSAS, aplico expertise em Visão
+              Computacional e Processamento de Imagens. Também dedico tempo à
+              mentoria e criação de soluções para projetos de Mestrado.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Atualmente, estou focado em desenvolvimento web moderno, 
-              utilizando tecnologias como React, Node.js e cloud computing 
-              para entregar produtos de alta qualidade.
+              Meu compromisso é entregar código elegante, eficiente e, acima de
+              tudo, escalável. Acredito que a excelência técnica deve andar de
+              mãos dadas com a aplicação prática. Busco sempre as melhores
+              arquiteturas para garantir segurança e performance, definindo o
+              futuro do desenvolvimento móvel e sistemas inteligentes.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
               <ul className="space-y-2 font-mono text-sm">
                 <li className="flex items-center gap-2">
-                  <span className="text-primary">▸</span> JavaScript (ES6+)
+                  <span className="text-primary">▸</span> Flutter
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-primary">▸</span> TypeScript
+                  <span className="text-primary">▸</span> MobX
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-primary">▸</span> React / Next.js
+                  <span className="text-primary">▸</span> Flutter Modular
                 </li>
               </ul>
               <ul className="space-y-2 font-mono text-sm">
                 <li className="flex items-center gap-2">
-                  <span className="text-primary">▸</span> Node.js
+                  <span className="text-primary">▸</span> TypeScript
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-primary">▸</span> Python
+                  <span className="text-primary">▸</span> ReactJS / Native
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-primary">▸</span> PostgreSQL
+                  <span className="text-primary">▸</span> NodeJS
                 </li>
               </ul>
             </div>

@@ -31,11 +31,8 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a
-            href="#"
-            className="text-2xl font-bold text-gradient font-display"
-          >
-            SN
+          <a href="#" className="text-2xl font-bold text-gradient font-display">
+            PR
           </a>
 
           {/* Desktop Menu */}

@@ -3,40 +3,22 @@ import { BookOpen, ArrowUpRight, Calendar } from "lucide-react";
 const Articles = () => {
   const articles = [
     {
-      title: "Construindo APIs Escaláveis com Node.js",
-      description:
-        "Um guia completo sobre como criar APIs RESTful escaláveis utilizando Node.js, Express e boas práticas de arquitetura.",
-      date: "15 Mar 2024",
-      readTime: "8 min",
-      link: "https://dev.to",
-      tags: ["Node.js", "API", "Backend"],
+      title:
+        "Sensitive periods of child development: a study on the construction and validation of the BASENP mobile application.",
+      description: "REVISTA BRASILEIRA DE ENFERMAGEM",
+      date: "08 Dec 2025",
+      // readTime: "8 min",
+      link: "http://dx.doi.org/10.1590/0034-7167-2024-0475",
+      tags: ["Flutter", "Mobx"],
     },
     {
-      title: "React Performance: Otimizações Essenciais",
+      title: "Wearable Stroke Alert System",
       description:
-        "Técnicas avançadas para otimizar a performance de aplicações React, incluindo memoização, code splitting e lazy loading.",
-      date: "28 Fev 2024",
-      readTime: "12 min",
-      link: "https://dev.to",
-      tags: ["React", "Performance", "Frontend"],
-    },
-    {
-      title: "TypeScript: Do Básico ao Avançado",
-      description:
-        "Uma jornada completa pelo TypeScript, desde os conceitos básicos até padrões avançados de tipagem.",
-      date: "10 Jan 2024",
-      readTime: "15 min",
-      link: "https://dev.to",
-      tags: ["TypeScript", "JavaScript"],
-    },
-    {
-      title: "Clean Architecture em Aplicações Web",
-      description:
-        "Como aplicar os princípios de Clean Architecture em projetos web modernos para criar código mais manutenível.",
-      date: "05 Dez 2023",
-      readTime: "10 min",
-      link: "https://dev.to",
-      tags: ["Arquitetura", "Clean Code"],
+        "New Health of Things Approach Based on Generative AI and Datafusion for Real-Time Stroke Monitoring.",
+      date: "03 Dec 2024",
+      // readTime: "12 min",
+      link: "http://dx.doi.org/10.1109/sbesc65055.2024.10771817",
+      tags: ["Python", "Classification", "AVC"],
     },
   ];
 
@@ -52,8 +34,10 @@ const Articles = () => {
         </div>
 
         <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-          Compartilho conhecimento através de artigos técnicos sobre desenvolvimento
-          web, arquitetura de software e boas práticas.
+          Como fruto da minha colaboração dentro do grupo de pesquisa e do
+          desenvolvimento de aplicações, publiquei alguns artigos em revistas
+          cientificas referente às minhas áreas de interesse. Aqui estão alguns
+          dos meus artigos mais recentes:
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -70,10 +54,10 @@ const Articles = () => {
                   <Calendar className="w-4 h-4" />
                   {article.date}
                 </div>
-                <div className="flex items-center gap-1">
+                {/* <div className="flex items-center gap-1">
                   <BookOpen className="w-4 h-4" />
                   {article.readTime}
-                </div>
+                </div> */}
               </div>
 
               <div className="flex items-start justify-between gap-4 mb-3">
@@ -99,18 +83,6 @@ const Articles = () => {
               </div>
             </a>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="https://dev.to"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-mono"
-          >
-            Ver todos os artigos
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
         </div>
       </div>
     </section>
